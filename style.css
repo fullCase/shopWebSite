@@ -25,7 +25,23 @@ body {
   text-decoration: none;
 }
 
-.navbar .hamburger {
+.navbar__form {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  left: 200px;
+}
+
+.navbar__input--search {
+  padding: 0px 10px;
+  width: 100%;
+  height: 40%;
+  background: white;
+  border: none;
+  border-radius: 30px;
+}
+
+.navbar__button {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,17 +49,50 @@ body {
   width: 40px;
   height: 40px;
   top: 50%;
-  right: 50px;
   background: none;
+  border: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: none;
   outline: none;
   cursor: pointer;
+}
+
+.navbar__button--submit {
+  width: 40px;
+  height: 40%;
+  top: 0;
+  left: calc(100% - 40px);
+  background: #c40505;
+  color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.navbar__button.shopCard {
+  right: 120px;
+  color: white;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar__button.sign {
+  right: 180px;
+  color: white;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar__button .buttonSpan {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.navbar .hamburger {
+  right: 50px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -51,8 +100,8 @@ body {
 .navbar .hamburger__span {
   position: relative;
   display: block;
-  width: 90%;
-  height: 12%;
+  width: 70%;
+  height: 9%;
   background: white;
 }
 
@@ -96,8 +145,13 @@ body {
   float: left;
 }
 
+.filter {
+  background: white;
+}
+
 .card {
   position: relative;
+  margin-bottom: 20px;
   width: 250px;
   height: 410px;
   background: white;
@@ -220,8 +274,8 @@ body {
 }
 
 .cardBody__span {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .card__footer {
