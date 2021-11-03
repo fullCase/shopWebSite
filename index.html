@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang = "pl">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+   <meta charset = "UTF-8">
+   <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+   <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+   <link rel = "stylesheet" href="style.css">
+   <link href = "https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+   <link href = "https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
    <title>Document</title>
 </head>
@@ -14,9 +14,20 @@
    <header>
       <nav class = "navbar">
          <a class = "navbar__a logo" href = "">
-            <span>fullCard</span> 
-            <span>shop store</span> 
+            <span class = "logo__span">Card</span> 
+            <span class = "logo__span">shop store</span> 
          </a>
+         <ul class = "navbar__ul">
+            <li class = "navbar__li">
+               <a class = "navbar__a" href = "#">home</a>
+            </li>
+            <li class = "navbar__li">
+               <a class = "navbar__a" href = "">about us</a>
+            </li>
+            <li class = "navbar__li">
+               <a class = "navbar__a" href = "">contact</a>
+            </li>
+         </ul>
          <form class = "navbar__form" action = "">
             <input class = "navbar__input navbar__input--search" type = "search" placeholder = "search">
             <button class = "navbar__button navbar__button--submit" type = "submit">
@@ -41,6 +52,46 @@
    <main class = "main">
       <div class = "offers">
          <div class = "filter">
+            <form class = "filter__form" action = "get">
+               <fieldset class="filter__fieldset">
+                 <details class = "filter__details" open>
+                    <summary class = "filter__summary">example</summary>
+                     <label class = "filter__label">
+                        <input class = "filter__input filter__input--checkbox" type = "checkbox">example
+                     </label>
+                     <label class = "filter__label">
+                        <input class = "filter__input filter__input--checkbox" type = "checkbox">example
+                     </label>
+                     <label class = "filter__label">
+                        <input class = "filter__input filter__input--checkbox" type = "checkbox">example
+                     </label>
+                 </details> 
+               </fieldset>
+               <fieldset class = "filter__fieldset">
+                  <details class = "filter__details" class = "filter__details" open>
+                     <summary class = "filter__summary">example</summary>
+                     <label class = "filter__label">min: <input class = "" id = "" type = "number" min = "0" max = "1000" maxlength = "4" value = "0"></label>
+                     <label class = "filter__label">max: <input class = "" id = "" type = "number" min = "0" max = "1000" maxlength = "4" placeholder = "1000"></label>
+                     <input class = "filter__input filter__input--range" type = "range" min = "0" max = "1000">   
+                  </details> 
+               </fieldset>
+               <fieldset class = "filter__fieldset">
+                  <details class = "filter__details" open>
+                     <summary class = "filter__summary">example</summary>
+                     <select class = "filter__select" name="" id="">
+                        <option class = "filter__option" value="">example 1</option>
+                        <option class = "filter__option" value="" selected>example 2</option>
+                        <option class = "filter__option" value="">example 3</option>
+                        <option class = "filter__option" value="">example 4</option>
+                        <option class = "filter__option" value="" disabled>example 5</option>
+                     </select>
+                  </details>
+               </fieldset>
+               <fieldset class = "filter__fieldset">
+                  <button class = "filter__button" type = "button">find</button>
+                  <button class = "filter__button reset" type = "reset">reset</button>
+               </fieldset>
+            </form>
          </div>
          <article class = "productList">
             <header class = "productList__header">
@@ -96,6 +147,11 @@
                </div>
             </section>
          </article>
+      </div>
+      <div class = "socialMedia">
+         <a class = "socialMedia__a" href = ""></a>
+         <a class = "socialMedia__a" href = ""></a>
+         <a class = "socialMedia__a" href = ""></a>
       </div>
    </main> 
 </body>
