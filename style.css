@@ -25,6 +25,55 @@ body {
   text-decoration: none;
 }
 
+.navbar .logo {
+  position: absolute;
+  left: 30px;
+  color: white;
+}
+
+.navbar .logo__span:first-child {
+  margin-top: 5px;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px gray;
+}
+
+.navbar .logo__span:last-child {
+  position: absolute;
+  display: block;
+  top: 40px;
+  left: 27%;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.navbar__ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 50%;
+  left: 40%;
+  list-style-type: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar__li {
+  padding: 0 15px;
+}
+
+.navbar__li .navbar__a {
+  color: white;
+  font-size: 1.0em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .navbar__form {
   position: relative;
   width: 300px;
@@ -33,12 +82,16 @@ body {
 }
 
 .navbar__input--search {
+  position: absolute;
   padding: 0px 10px;
   width: 100%;
   height: 40%;
+  top: 50%;
   background: white;
   border: none;
   border-radius: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .navbar__button {
@@ -64,12 +117,14 @@ body {
 .navbar__button--submit {
   width: 40px;
   height: 40%;
-  top: 0;
+  top: 50%;
   left: calc(100% - 40px);
   background: #c40505;
   color: white;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .navbar__button.shopCard {
@@ -130,13 +185,98 @@ body {
 .offers {
   margin: 0 auto 0 5%;
   width: 80%;
-  height: 80vh;
+  height: 100vh;
 }
 
 .filter {
-  width: 15%;
+  width: 20%;
   height: 100%;
   float: left;
+  background: white;
+}
+
+.filter__fieldset {
+  margin: 10px auto;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filter__label {
+  margin: 8px 0;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.filter__input {
+  margin: 0 10px 0 5px;
+  width: 15px;
+  height: 15px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.filter__input--checkbox {
+  position: relative;
+  bottom: -3px;
+}
+
+.filter__input--range {
+  width: 80%;
+}
+
+.filter__select {
+  margin: 8px 0 8px 10px;
+  width: 150px;
+  padding: 2px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(85%, white), color-stop(15%, rgba(128, 128, 128, 0.452)));
+  background: linear-gradient(to right, white 85%, rgba(128, 128, 128, 0.452) 15%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.0rem;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter__button {
+  display: block;
+  margin: 10px auto 0px auto;
+  padding: 5px 0;
+  width: 170px;
+  background: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.0em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 3px solid #c40505;
+  border-radius: .3em;
+  cursor: pointer;
+}
+
+.filter__button:hover {
+  background: #c40505;
+  color: white;
+}
+
+.filter__button.reset {
+  width: 120px;
+  font-size: .9em;
+  border: 3px solid purple;
+}
+
+.filter__button.reset:hover {
+  background: purple;
 }
 
 .productList {
@@ -145,12 +285,9 @@ body {
   float: left;
 }
 
-.filter {
-  background: white;
-}
-
 .card {
   position: relative;
+  margin-left: 10px;
   margin-bottom: 20px;
   width: 250px;
   height: 410px;
@@ -301,5 +438,11 @@ body {
   outline: none;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+@media screen and (max-width: 1000px) {
+  .filter {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
