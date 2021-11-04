@@ -164,10 +164,6 @@ body{
       width: 90%;
       border: none; 
       border-radius: 5px;
-
-      // &:last-child{
-         
-      // } 
    }
 
    &__details{
@@ -187,18 +183,81 @@ body{
    }
 
    &__input{
-     margin: 0 10px 0 5px;
-     width: 15px;
-     height: 15px;
-     font-size: 1.3em;
-     cursor: pointer;
-     &--checkbox{
-        position: relative;
-        bottom: -3px;
-     }
-     &--range{
-        width: 80%;
-     }
+      margin: 0 10px 0 5px;
+      width: 15px;
+      height: 15px;
+      font-size: 1.3em;
+      cursor: pointer;
+      &--checkbox{
+         position: relative;
+         bottom: -3px;
+      }
+   }
+
+   .container{
+      position: relative;
+      width: 100%;
+      height: 50px;
+      // border: 1px solid black;
+   }
+
+   .filter__input--range{
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      background-color: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline: none;
+      pointer-events: none;
+      &::-webkit-slider-runnable-track{
+         -webkit-appearance: none;
+         height: 15px;
+      }
+      &::-moz-range-track{
+         -moz-appearance: none;
+         height: 15px;
+      }
+      &::-ms-track{
+         appearance: none;
+         height: 15px;
+      }
+      &::-webkit-slider-thumb{
+         -webkit-appearance: none;
+         width: 1.2em;
+         height: 1.2em;
+         background: hsl(0, 0%, 19%);
+         border-radius: 50%;
+         cursor: pointer;
+         pointer-events: auto;
+      }
+      &::-ms-thumb{
+         appearance: none;
+         width: 1.2em;
+         height: 1.2em;
+         background: hsl(0, 0%, 19%);
+         border-radius: 50%;
+         cursor: pointer;
+         pointer-events: auto; 
+      }
+      &:active::-webkit-slider-thumb{
+         background-color: white;
+         border: 2px solid hsl(0, 0%, 19%);
+      }
+   }
+
+   .slider-track{
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      height: 5px;
+      top: 0;
+      bottom: 0;
+      background-color: #d5d5d5;
+      border-radius: 5px; 
    }
 
    &__select{
