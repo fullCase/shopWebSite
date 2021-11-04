@@ -232,8 +232,75 @@ body {
   bottom: -3px;
 }
 
-.filter__input--range {
-  width: 80%;
+.filter .container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.filter .filter__input--range {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.filter .filter__input--range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 15px;
+}
+
+.filter .filter__input--range::-moz-range-track {
+  -moz-appearance: none;
+  height: 15px;
+}
+
+.filter .filter__input--range::-ms-track {
+  appearance: none;
+  height: 15px;
+}
+
+.filter .filter__input--range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  background: #303030;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.filter .filter__input--range::-ms-thumb {
+  appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  background: #303030;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.filter .filter__input--range:active::-webkit-slider-thumb {
+  background-color: white;
+  border: 2px solid #303030;
+}
+
+.filter .slider-track {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  bottom: 0;
+  background-color: #d5d5d5;
+  border-radius: 5px;
 }
 
 .filter__select {
