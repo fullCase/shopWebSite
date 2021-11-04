@@ -53,7 +53,7 @@
       <div class = "offers">
          <div class = "filter">
             <form class = "filter__form" action = "get">
-               <fieldset class="filter__fieldset">
+               <fieldset class = "filter__fieldset">
                  <details class = "filter__details" open>
                     <summary class = "filter__summary">example</summary>
                      <label class = "filter__label">
@@ -70,9 +70,13 @@
                <fieldset class = "filter__fieldset">
                   <details class = "filter__details" class = "filter__details" open>
                      <summary class = "filter__summary">example</summary>
-                     <label class = "filter__label">min: <input class = "" id = "" type = "number" min = "0" max = "1000" maxlength = "4" value = "0"></label>
-                     <label class = "filter__label">max: <input class = "" id = "" type = "number" min = "0" max = "1000" maxlength = "4" placeholder = "1000"></label>
-                     <input class = "filter__input filter__input--range" type = "range" min = "0" max = "1000">   
+                     <label class = "filter__label">min: <input class = "" id = "rangeValue1" type = "number" min = "0" max = "1000" maxlength = "4" value = "0"></label>
+                     <label class = "filter__label">max: <input class = "" id = "rangeValue2" type = "number" min = "0" max = "1000" maxlength = "4" placeholder = "1000"></label>
+                     <div class = "container">
+                        <div class = "slider-track"></div>
+                        <input class = "fliter__input filter__input--range" id = "range1" type = "range" min = "0" max = "1000" value = "30">
+                        <input class = "fliter__input filter__input--range" id = "range2" type = "range" min = "0" max = "1000" value = "700">
+                     </div> 
                   </details> 
                </fieldset>
                <fieldset class = "filter__fieldset">
@@ -94,8 +98,7 @@
             </form>
          </div>
          <article class = "productList">
-            <header class = "productList__header">
-               
+            <header class = "productList__header">  
             </header>
             <section class = "productList__section">
                <div class = "card">
@@ -130,7 +133,7 @@
                   <footer class = "card__footer">
                      <p class = "card__p tags">#tag #secondtag</pdd>
                      <button class = "card__button">
-                        <span class="material-icons-outlined">
+                        <span class = "material-icons-outlined">
                            scale
                         </span>
                      </button>
@@ -142,7 +145,6 @@
                      <h5 class = "card__h5">subtitle</h5> 
                   </header>
                   <div class = "cardBody">
-
                   </div>
                </div>
             </section>
@@ -153,7 +155,8 @@
          <a class = "socialMedia__a" href = ""></a>
          <a class = "socialMedia__a" href = ""></a>
       </div>
-   </main> 
+   </main>
+   <script src = "function.js"></script> 
 </body>
 </html>
 
