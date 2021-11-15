@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "pl">
+   <head>
+      <meta charset="UTF-8">      
+      <meta name = "description" content = "website shop project">
+      <meta name = "author" content = "Łukasz">
+      <meta name = "copyright" content = "Copyright owner">
+      <meta name = "robots" content = "noindex">
+      <meta name = "robots" content = "nofollow">
+      <meta http-equiv = "Content-Type" content = "text/html;charset=UTF-8"> 
+      <meta http-equiv = "X-UA-Compatible" content = "IE=7">
+      <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+      <meta http-equiv = "cache-control" content = "no-cache">
+      <meta http-equiv = "expires" content = "0">       <!--this-->
+      <meta http-equiv = "expires" content = "4330000"> <!--and this-->
+      <meta http-equiv = "expires" content = "sat, 07 feb 2022 00:00:00 GMT"><!--or this-->
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+      <title>Shop Online</title>
+      <link rel = "stylesheet" href = "style.css">
+      <link rel = "apple-touch-icon" href = "favicon.png">
+      <link href = "https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel = "stylesheet">
+      <link href = "https://fonts.googleapis.com/css2?family=Material+Icons" rel = "stylesheet">
+   </head>
+   <body>
+      <main>
+         <header class = "main__header">
+            <div class = "header__div">sale 30%, 50%, 70%</div>
+            <nav class = "navbar" id = "navbar">
+               <a class = "navbar__a logo" href = "" title = "shop" aria-label = "website logo">
+                  <span class = "logo__span">card</span>
+                  <span class = "logo_span">shop store</span>
+               </a>
+               <form class = "navbar__form" method = "get" action = "">
+                  <input class = "navbar__input navbar__input--search" id = "navbar_search" type = "search" list = "exampleList" name="" spellcheck = "true" placeholder = "search" title = "search" aria-label = "search product">
+                  <button class = "navbar__button formBtn" id = "formBtn" type = "button" title = "search" aria-label = "search button">
+                     <span class = "navbar__span material-icons-outlined">search</span>
+                  </button>
+                  <datalist id = "exampleList">
+                     <option value = "example">example</option>
+                     <option value = "test">example</option>                     
+                     <option value = "example">product</option>
+                     <!-- ....  -->
+                  </datalist>
+               </form>
+               <section class = "navbar__section navbarItems">
+                  <ul class = "navbar__ul">
+                     <li class = "navbar__li">
+                        <a class = "navbar__a" href = "#" title = "home page" value = "Home" aria-label = "go to home page">Home</a>
+                     </li>
+                     <li class = "navbar__li">
+                        <a class = "navbar__a" href = "" title = "something about us" aria-label = "about us">about us</a>
+                        <div class = "navbar__div sub_menu" id = "subMenu" aria-label = "home sub-menu">
+                           <header class = "sub_menu__header">
+                              <h3 class = "navbar__h3">example sub title</h3>
+                           </header>
+                           <img class = "navbar__img" src = "" alt = "example navbar image" loading = "eager">
+                           <ul class = "navbar__ul sub_menu__ul">
+                              <li class = "navbar__li sub_menu__li">
+                                 <a class = "navbar__a sub_menu__a" href = "">sub-example</a>
+                                 <ul class = "navbar__ul sub_sub_menu__ul">
+                                    <header class = "sub_sub_menu__header">
+                                       <h4 class = "navbar__h4">example h4 header</h4>
+                                    </header>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <footer class = "sub_menu__footer"></footer>
+                        </div>
+                     </li>
+                     <li class = "navbar__li">
+                        <a class = "navbar__a" href = "" title = "find something just for you" aria-label = "product">product</a>
+                     </li>
+                  </ul>
+               </section>
+               <section class = "navbar__section buttonContainer">
+                  <button class = "navbar__button" type = "button" title = "show shop card" aria-label = "show shop card">
+                     <span class = "navbar__span buttonSpan material-icons">
+                        shopping_cart
+                     </span>
+                  </button>
+                  <button class = "navbar__button" type = "button" title = "user account">
+                     <span class="navbar__span material-icons">
+                        account_circle
+                     </span>
+                  </button>
+                  <button class = "navbar__button" id = "hamburgerBtn" type = "button" title = "menu" aria-haspoup = "true" aria-label = "menu button">
+                     <span class = "navbar__span"></span>
+                  </button>
+               </section> 
+            </nav>
+         </header>
+      </main>
+   </body>
+</html>
