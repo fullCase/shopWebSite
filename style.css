@@ -182,6 +182,10 @@ body {
   letter-spacing: 2px;
 }
 
+.navbar__ul .navbar__li:hover .navbar__a {
+  font-size: 1.4em;
+}
+
 .navbar .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,6 +221,7 @@ body {
   position: absolute;
   display: -ms-grid;
   display: grid;
+  padding: 10px 0;
   width: 100%;
   height: 0;
   top: 10vh;
@@ -225,8 +230,8 @@ body {
   color: white;
   visibility: hidden;
   z-index: 100;
-  -webkit-transition: height .7s ease-in-out, visibility .5s ease-in-out;
-  transition: height .7s ease-in-out, visibility .5s ease-in-out;
+  -webkit-transition: visibility 0.2s ease-out, height 0.4s cubic-bezier(0.61, 0.36, 0.87, 0.4);
+  transition: visibility 0.2s ease-out, height 0.4s cubic-bezier(0.61, 0.36, 0.87, 0.4);
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
@@ -234,22 +239,32 @@ body {
 }
 
 .navbar .sub_menu__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-grid-column: 2;
       grid-column-start: 2;
   grid-column-end: 5;
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navbar .sub_menu__img {
-  height: 30vh;
+  width: 75%;
+  height: 40vh;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 1;
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 3;
+  visibility: hidden;
+  -webkit-transition: visibility .2s ease-out;
+  transition: visibility .2s ease-out;
 }
 
 .navbar .sub_menu__ul {
@@ -257,34 +272,102 @@ body {
   list-style-type: none;
 }
 
-.navbar .sub_menu__ul::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 2px;
-  height: 25vh;
-  top: 2.5vh;
-  left: 80%;
-  background: white;
-}
-
-.navbar .sub_menu__li {
-  padding: 5px 0;
-}
-
-.navbar .sub_menu__a {
+.navbar .sub_menu__h4 {
   color: white;
   font-size: 1.2em;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   text-decoration: none;
   text-transform: capitalize;
-  text-align: center;
   letter-spacing: 2px;
 }
 
+.navbar .sub_menu__li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .sub_menu__a {
+  color: white;
+  font-size: 1.0em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.navbar .sub_menu__a:hover {
+  border-bottom: 2px solid white;
+}
+
 .navbar__li:hover .sub_menu {
-  height: 30vh;
+  height: 60vh;
   visibility: visible;
+}
+
+.navbar__li:hover .sub_menu__img {
+  visibility: visible;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar__input--search {
+    width: calc(500px - 200px);
+  }
+  .navbar__input--search::-webkit-input-placeholder {
+    padding-left: 5px;
+  }
+  .navbar__input--search:-ms-input-placeholder {
+    padding-left: 5px;
+  }
+  .navbar__input--search::-ms-input-placeholder {
+    padding-left: 5px;
+  }
+  .navbar__input--search::placeholder {
+    padding-left: 5px;
+  }
+  .navbar__section.navbarItems {
+    position: absolute;
+    width: 0;
+    height: 90vh;
+    top: 10vh;
+    left: auto;
+    right: 0;
+    background: none;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .navbar__section.navbarItems.active {
+    width: 50%;
+    background: #343232;
+  }
+  .navbar__ul {
+    display: block;
+    width: 100%;
+    list-style-type: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar__ul.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__button:last-child {
+    visibility: visible;
+  }
 }
 /*# sourceMappingURL=style.css.map */
